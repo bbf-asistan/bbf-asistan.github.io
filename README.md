@@ -9,7 +9,7 @@ Bölüm içi sınav, gözetmenlik, laboratuvar ve asistanlık araçlarına tek b
 ## 📌 İçerik ve Bağlantılar
 
 ### 🛠️ Araçlar
-- **[SınavTeX](https://dgknrsln.github.io/sinavtex/)**: Otomatik LaTeX ve PDF formatında sınav kağıdı oluşturma aracı.
+- **[SınavTeX](https://bbf-asistan.github.io/sinavtex/)**: Otomatik LaTeX ve PDF formatında sınav kağıdı oluşturma aracı.
 - **[Speech to Grade](https://alpaslantavukcu.github.io/speech_to_grade/)**: Ses tanıma ile sınav notlarını hızlı ve hatasız girme yardımcısı.
 - **[Seating Plan Generator](https://github.com/alpaslantavukcu/seating_plan_generator)**: Sınavlar için otomatik derslik ve oturma düzeni oluşturucu.
 
