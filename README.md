@@ -1,6 +1,6 @@
 # bbf-asistan — Proje ve Araç Başlatıcı Portalı
 
-Modern, hızlı ve estetik bir merkezi landing page ve proje portalı. Başta [SınavTeX](https://dgknrsln.github.io/sinavtex/) olmak üzere web projelerinize tek noktadan erişim sağlar.
+Sade, hızlı ve erişilebilir tek sayfalık bir bağlantı portalı. Başta [SınavTeX](https://dgknrsln.github.io/sinavtex/) olmak üzere web projelerinize tek noktadan erişim sağlar.
 
 ---
 
@@ -14,19 +14,10 @@ Modern, hızlı ve estetik bir merkezi landing page ve proje portalı. Başta [S
 
 ## ✨ Özellikler
 
-- ☀️ **Modern Açık Tema**: Temiz, ferah ve yüksek okunabilirlikli arayüz.
-- 📱 **Tam Responsive & Modern Glassmorphism Tasarım**: Her ekran boyutuna uyumlu interaktif görsel kartlar.
-
----
-
-## ⌨️ Klavye Kısayolları
-
-| Kısayol | İşlem |
-| :--- | :--- |
-| `⌘ K` veya `Ctrl+K` | Hızlı Komut Paleti & Araç Arama |
-| `⌘ N` veya `Ctrl+N` | Yeni Proje / Araç Ekleme Modalı |
-| `⌘ J` veya `Ctrl+J` | Hızlı Çalışma Notlarını Aç / Kapat |
-| `ESC` | Açık pencereleri ve modalları kapat |
+- **Sade tasarım**: Tek vurgu rengi, düz kartlar, sistem fontu; harici font veya kütüphane yok.
+- **Erişilebilir**: Yüksek kontrast, klavye ile gezinme ve görünür odak çerçevesi, ekran okuyucu etiketleri.
+- **Otomatik koyu tema**: İşletim sistemi tercihine göre açık/koyu görünüm.
+- **Responsive**: Telefon, tablet ve masaüstünde uyumlu.
 
 ---
 
