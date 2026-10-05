@@ -6,195 +6,74 @@
   <title>bbf-asistan</title>
   <meta name="description" content="SınavTeX ve bölüm araçlarına, sistemlerine tek bir noktadan hızlı erişim.">
   <meta name="color-scheme" content="light dark">
-
-  <!-- Preconnect & Fonts for Rich Theme -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link id="theme-fonts" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap">
-
   <link rel="stylesheet" href="style.css">
-
-  <script>
-    // Immediate theme restoration to prevent theme flash
-    (function () {
-      try {
-        if (localStorage.getItem('bbf_theme') === 'tema') {
-          document.documentElement.setAttribute('data-theme', 'tema');
-        }
-      } catch (e) {}
-    })();
-  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">İçeriğe geç</a>
 
-  <!-- Ambient background glow elements for rich theme -->
-  <div class="ambient-glow glow-1"></div>
-  <div class="ambient-glow glow-2"></div>
-  <div class="ambient-grid"></div>
-
-  <!-- Header -->
   <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand-group">
-        <a href="#" class="brand brand-logo">
-          <div class="logo-icon">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-              <polyline points="2 17 12 22 22 17"></polyline>
-              <polyline points="2 12 12 17 22 12"></polyline>
-            </svg>
-          </div>
-          <div class="brand-text">
-            <span class="brand-title">bbf<span class="gradient-text">-asistan</span></span>
-          </div>
-        </a>
-      </div>
+    <div class="container">
+      <a href="#" class="brand">bbf-asistan</a>
     </div>
   </header>
 
   <main id="main" class="container">
 
-    <!-- Section 1: Araçlar -->
     <section aria-labelledby="tools-heading">
-      <div class="section-header">
-        <div class="section-title-wrap">
-          <div class="section-icon-badge">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"></path>
-            </svg>
-          </div>
-          <h2 id="tools-heading">Araçlar</h2>
-        </div>
-        <span class="section-count-badge">3 Araç</span>
-      </div>
-
+      <h2 id="tools-heading">Araçlar</h2>
       <ul class="card-grid">
         <li>
-          <a class="card spotlight-card card-indigo" href="https://dgknrsln.github.io/sinavtex/" target="_blank" rel="noopener noreferrer" id="sinavtex-card">
-            <div class="spotlight-bg-effect"></div>
-            <div class="spotlight-card-top">
-              <div class="spotlight-icon-box">
-                <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h6"/></svg>
-              </div>
-              <div class="btn-link-action" title="SınavTeX'e Git" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </div>
-            </div>
-            <div class="spotlight-card-body">
-              <span class="card-title spotlight-title">SınavTeX <span class="ext" aria-hidden="true">↗</span></span>
-              <span class="card-desc spotlight-tagline">Otomatik LaTeX/PDF sınav oluşturma aracı.</span>
-            </div>
+          <a class="card" href="https://dgknrsln.github.io/sinavtex/" target="_blank" rel="noopener noreferrer">
+            <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h6"/></svg>
+            <span class="card-title">SınavTeX <span class="ext" aria-hidden="true">↗</span></span>
+            <span class="card-desc">Otomatik LaTeX/PDF sınav oluşturma aracı.</span>
             <span class="visually-hidden">(yeni sekmede açılır)</span>
           </a>
         </li>
         <li>
-          <a class="card spotlight-card card-cyan" href="https://alpaslantavukcu.github.io/speech_to_grade/" target="_blank" rel="noopener noreferrer" id="speech-to-grade-card">
-            <div class="spotlight-bg-effect" style="background: linear-gradient(135deg, rgba(6, 182, 212, 0.15) 0%, rgba(59, 130, 246, 0.08) 50%, rgba(16, 185, 129, 0.12) 100%);"></div>
-            <div class="spotlight-card-top">
-              <div class="spotlight-icon-box">
-                <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v4"/><path d="M8 23h8"/></svg>
-              </div>
-              <div class="btn-link-action" title="Speech to Grade'e Git" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </div>
-            </div>
-            <div class="spotlight-card-body">
-              <span class="card-title spotlight-title">Speech to Grade <span class="ext" aria-hidden="true">↗</span></span>
-              <span class="card-desc spotlight-tagline">Ses tanıma ile not girişi yardımcısı.</span>
-            </div>
+          <a class="card" href="https://alpaslantavukcu.github.io/speech_to_grade/" target="_blank" rel="noopener noreferrer">
+            <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><path d="M12 19v4"/><path d="M8 23h8"/></svg>
+            <span class="card-title">Speech to Grade <span class="ext" aria-hidden="true">↗</span></span>
+            <span class="card-desc">Ses tanıma ile not girişi yardımcısı.</span>
             <span class="visually-hidden">(yeni sekmede açılır)</span>
           </a>
         </li>
         <li>
-          <a class="card spotlight-card card-amber" href="https://github.com/alpaslantavukcu/seating_plan_generator" target="_blank" rel="noopener noreferrer" id="seating-plan-card">
-            <div class="spotlight-bg-effect" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(239, 68, 68, 0.08) 50%, rgba(139, 92, 246, 0.12) 100%);"></div>
-            <div class="spotlight-card-top">
-              <div class="spotlight-icon-box">
-                <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
-              </div>
-              <div class="btn-link-action" title="GitHub Projesine Git" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </div>
-            </div>
-            <div class="spotlight-card-body">
-              <span class="card-title spotlight-title">Seating Plan Generator <span class="ext" aria-hidden="true">↗</span></span>
-              <span class="card-desc spotlight-tagline">Otomatik sınav oturma düzeni oluşturucu.</span>
-            </div>
+          <a class="card" href="https://github.com/alpaslantavukcu/seating_plan_generator" target="_blank" rel="noopener noreferrer">
+            <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+            <span class="card-title">Seating Plan Generator <span class="ext" aria-hidden="true">↗</span></span>
+            <span class="card-desc">Otomatik sınav oturma düzeni oluşturucu.</span>
             <span class="visually-hidden">(yeni sekmede açılır)</span>
           </a>
         </li>
       </ul>
     </section>
 
-    <!-- Section 2: Bağlantılar -->
     <section aria-labelledby="links-heading">
-      <div class="section-header">
-        <div class="section-title-wrap">
-          <div class="section-icon-badge color-violet">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
-              <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
-            </svg>
-          </div>
-          <h2 id="links-heading">Bağlantılar</h2>
-        </div>
-        <span class="section-count-badge">3 Bağlantı</span>
-      </div>
-
+      <h2 id="links-heading">Bağlantılar</h2>
       <ul class="card-grid">
         <li>
-          <a class="card spotlight-card card-violet" href="https://160.75.52.83" target="_blank" rel="noopener noreferrer" id="gozetmenlik-card">
-            <div class="spotlight-bg-effect" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(99, 102, 241, 0.08) 50%, rgba(236, 72, 153, 0.1) 100%);"></div>
-            <div class="spotlight-card-top">
-              <div class="spotlight-icon-box">
-                <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-              </div>
-              <div class="btn-link-action" title="Gözetmenlik Sistemine Git" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </div>
-            </div>
-            <div class="spotlight-card-body">
-              <span class="card-title spotlight-title">Gözetmenlik Sistemi <span class="ext" aria-hidden="true">↗</span></span>
-              <span class="card-desc spotlight-tagline">Gözetmenlik işleri ve yük dağılımı.</span>
-            </div>
+          <a class="card" href="https://160.75.52.83" target="_blank" rel="noopener noreferrer">
+            <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            <span class="card-title">Gözetmenlik Sistemi <span class="ext" aria-hidden="true">↗</span></span>
+            <span class="card-desc">Gözetmenlik işleri ve yük dağılımı.</span>
             <span class="visually-hidden">(yeni sekmede açılır)</span>
           </a>
         </li>
         <li>
-          <a class="card spotlight-card card-emerald" href="https://160.75.52.83/lab/" target="_blank" rel="noopener noreferrer" id="lab-sistemi-card">
-            <div class="spotlight-bg-effect" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(6, 182, 212, 0.08) 50%, rgba(59, 130, 246, 0.1) 100%);"></div>
-            <div class="spotlight-card-top">
-              <div class="spotlight-icon-box">
-                <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
-              </div>
-              <div class="btn-link-action" title="Lab Sistemine Git" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </div>
-            </div>
-            <div class="spotlight-card-body">
-              <span class="card-title spotlight-title">Lab Sistemi <span class="ext" aria-hidden="true">↗</span></span>
-              <span class="card-desc spotlight-tagline">Laboratuvar ve toplantı odası rezervasyonu.</span>
-            </div>
+          <a class="card" href="https://160.75.52.83/lab/" target="_blank" rel="noopener noreferrer">
+            <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg>
+            <span class="card-title">Lab Sistemi <span class="ext" aria-hidden="true">↗</span></span>
+            <span class="card-desc">Laboratuvar ve toplantı odası rezervasyonu.</span>
             <span class="visually-hidden">(yeni sekmede açılır)</span>
           </a>
         </li>
         <li>
-          <div class="card spotlight-card card-rose copy-card" id="yazici-card" role="button" tabindex="0" data-copy="https://160.75.52.13">
-            <div class="spotlight-bg-effect" style="background: linear-gradient(135deg, rgba(244, 63, 94, 0.15) 0%, rgba(245, 158, 11, 0.08) 50%, rgba(139, 92, 246, 0.1) 100%);"></div>
-            <div class="spotlight-card-top">
-              <div class="spotlight-icon-box">
-                <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-              </div>
-              <div class="btn-link-action btn-copy-action" title="Adresi Kopyala" aria-label="Adresi Kopyala">
-                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              </div>
-            </div>
-            <div class="spotlight-card-body">
-              <span class="card-title spotlight-title">Yazıcı</span>
-              <span class="card-desc spotlight-tagline"><code>https://160.75.52.13</code></span>
-              <button type="button" class="copy-btn" data-copy="https://160.75.52.13" aria-label="Yazıcı adresini kopyala">Kopyala</button>
-            </div>
+          <div class="card">
+            <svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            <span class="card-title">Yazıcı</span>
+            <span class="card-desc"><code>https://160.75.52.13</code></span>
+            <button type="button" class="copy-btn" data-copy="https://160.75.52.13" aria-label="Yazıcı adresini kopyala">Kopyala</button>
           </div>
         </li>
       </ul>
@@ -206,7 +85,6 @@
     <div class="container">© 2026 bbf-asistan</div>
   </footer>
 
-  <div class="toast-container" id="toast-container"></div>
   <div class="visually-hidden" role="status" aria-live="polite" id="status"></div>
 
   <script src="app.js"></script>

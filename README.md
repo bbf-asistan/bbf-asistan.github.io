@@ -1,66 +1,53 @@
 # bbf-asistan
 
-Bölüm araçlarına, sınav hazırlama sistemlerine ve dahili sunucu servislerine tek bir noktadan hızlı ve pratik erişim sağlayan merkezi web portalı.
+Bölüm içi sınav, gözetmenlik, laboratuvar ve asistanlık araçlarına tek bir noktadan hızlı ve pratik erişim sağlayan hafif, modern ve erişilebilir başlangıç sayfası (portal/landing page).
+
+🌐 **Canlı Sürüm:** [bbf-asistan.github.io](https://bbf-asistan.github.io)
 
 ---
 
-## 🚀 Entegre Araçlar
+## 📌 İçerik ve Bağlantılar
 
-- **[SınavTeX](https://dgknrsln.github.io/sinavtex/)**: Otomatik LaTeX/PDF sınav oluşturma ve soru dizgi aracı.
-- **[Speech to Grade](https://alpaslantavukcu.github.io/speech_to_grade/)**: Ses tanıma destekli notlandırma ve değerlendirme asistanı.
-- **[Seating Plan Generator](https://github.com/alpaslantavukcu/seating_plan_generator)**: Otomatik sınav oturma planı ve kelebek düzeni oluşturucu.
+### 🛠️ Araçlar
+- **[SınavTeX](https://dgknrsln.github.io/sinavtex/)**: Otomatik LaTeX ve PDF formatında sınav kağıdı oluşturma aracı.
+- **[Speech to Grade](https://alpaslantavukcu.github.io/speech_to_grade/)**: Ses tanıma ile sınav notlarını hızlı ve hatasız girme yardımcısı.
+- **[Seating Plan Generator](https://github.com/alpaslantavukcu/seating_plan_generator)**: Sınavlar için otomatik derslik ve oturma düzeni oluşturucu.
 
----
-
-## 🔗 Dahili Bağlantılar ve Servisler
-
-- **[Gözetmenlik Sistemi](https://160.75.52.83)**: Sınav gözetmenlik görevleri ve yük dağılım paneli.
-- **[Lab Sistemi](https://160.75.52.83/lab/)**: Laboratuvar ve toplantı salonu rezervasyon sistemi.
-- **Yazıcı**: Tek tıkla panoya kopyalanabilir dahili yazıcı adresi (`https://160.75.52.13`).
+### 🔗 Bölüm Sistemleri & Dahili Bağlantılar
+- **Gözetmenlik Sistemi**: Sınav gözetmenlik görevleri ve iş yükü dağıtım sistemi.
+- **Lab Sistemi**: Laboratuvar ve toplantı odası rezervasyon yönetimi.
+- **Yazıcı Erişimi**: Dahili ağdaki yazıcı adresini tek tıkla panoya kopyalama desteği.
 
 ---
 
-## ✨ Özellikler
+## ✨ Teknik Özellikler
 
-- ⚡ **Hızlı ve Hafif**: Sıfır dış bağımlılık, yalın HTML5, CSS3 ve Vanilla JavaScript mimarisi.
-- 🌓 **Otomatik Açık / Koyu Tema**: İşletim sistemi tercihine uyumlu (`prefers-color-scheme`) minimalist düz kart tasarımı.
-- 🎨 **Çift Tema Desteği (Dinamik Geçiş)**:
-  - **Varsayılan Tema**: Temiz, yüksek okunabilirlikli ve odaklanmış arayüz.
-  - **Zengin Tema (Glassmorphism & Glow)**: Canlı degrade ışıklar, cam efekti, modern tipografi ve bildirim pencereleri.
-- 📋 **Akıllı Pano Entegrasyonu**: Ağ adreslerini tek tıkla kopyalama ve anlık geri bildirim bildirimleri (Toast).
-
----
-
-## ⌨️ Klavye Kısayolları
-
-| Kısayol | İşlem |
-| :--- | :--- |
-| `⌘ + Shift + O + P` *(macOS)*<br>`Ctrl + Shift + O + P` *(Windows/Linux)* | **Temalar Arası Geçiş** (Varsayılan ⇄ Zengin Tema) |
-
-> *Seçilen tema tercihi tarayıcı yerel hafızasında (`localStorage`) saklanır ve sayfa yenilendiğinde hatırlanır.*
+- **Sıfır Bağımlılık (Zero-Dependency):** Saf HTML5, modern CSS3 ve Vanilla JavaScript; derleme (build) adımı gerektirmez.
+- **Otomatik Tema (Light/Dark Mode):** Sistem tercihlerine göre otomatik uyum sağlayan (`prefers-color-scheme`) şık renk paleti.
+- **Erişilebilirlik (A11y):**
+  - Klavye kullanıcıları için doğrudan içeriğe geçiş (`Skip to content`) bağlantısı.
+  - Ekran okuyucu bildirimleri (`aria-live="polite"`).
+  - Yüksek kontrast ve hareket hassasiyeti (`prefers-reduced-motion`) desteği.
+- **Pano Entegrasyonu:** Modern `navigator.clipboard` API desteği ve yerel (`file://` / düz HTTP) ortamlar için geriye dönük fallback mekanizması.
+- **Duyarlı (Responsive) Tasarım:** Mobil, tablet ve masaüstü ekranlarda kusursuz ızgara (CSS Grid) görünümü.
 
 ---
 
-## 🛠️ Yerel Olarak Çalıştırma
+## 🚀 Yerel Geliştirme (Local Development)
 
-Sayfa tamamen statiktir. Doğrudan tarayıcınızda açabilir veya yerel bir sunucu başlatabilirsiniz:
+Proje tamamen statik dosyalardan oluştuğu için herhangi bir derleme aracına ihtiyaç duymaz.
 
-### 1. Python ile Yerel Sunucu
 ```bash
-python3 -m http.server 3000
-```
-Tarayıcınızda `http://localhost:3000` adresine gidin.
+# Depoyu klonlayın
+git clone https://github.com/bbf-asistan/bbf-asistan.github.io.git
+cd bbf-asistan.github.io
 
-### 2. Node.js / npx ile
-```bash
+# Herhangi bir yerel sunucu ile çalıştırın:
+# Python 3 ile:
+python3 -m http.server 8000
+
+# veya Node.js / npx ile:
 npx serve .
 ```
 
-### 3. Doğrudan Çalıştırma
-`index.html` dosyasına çift tıklayarak tarayıcınızda doğrudan açabilirsiniz.
-
----
-
-## 📄 Lisans
-
-Bu proje açık kaynaklıdır ve bölüm içi kullanım ile akademik üretkenliği artırmak amacıyla geliştirilmiştir.
+Ardından tarayıcınızda `http://localhost:8000` adresini açabilirsiniz.
