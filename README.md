@@ -1,4 +1,4 @@
-# bbf-asistan.hub — Kişisel Proje ve Araç Başlatıcı Portalı
+# bbf-asistan — Proje ve Araç Başlatıcı Portalı
 
 Modern, hızlı ve estetik bir merkezi landing page ve proje portalı. Başta [SınavTeX](https://dgknrsln.github.io/sinavtex/) olmak üzere web projelerinize tek noktadan erişim sağlar.
 
