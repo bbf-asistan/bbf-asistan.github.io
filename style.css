@@ -89,7 +89,8 @@ h2 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
+  min-height: 160px;
   padding: 20px;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -99,9 +100,24 @@ h2 {
   transition: border-color 0.15s, background-color 0.15s;
 }
 
-a.card:hover {
+a.card:hover,
+button.card:hover {
   border-color: var(--accent);
   background: var(--accent-soft);
+}
+
+button.card {
+  font: inherit;
+  line-height: inherit;
+  text-align: left;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+a.card:active,
+button.card:active {
+  transform: scale(0.995);
 }
 
 .card-icon {
@@ -132,21 +148,72 @@ code {
   font-size: 0.9em;
 }
 
-.copy-btn {
-  align-self: flex-start;
-  margin-top: 8px;
-  padding: 6px 14px;
-  font: inherit;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--accent);
-  background: transparent;
-  border: 1px solid var(--accent);
-  border-radius: 6px;
-  cursor: pointer;
+/* Address row & copy styles */
+.address-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: auto;
 }
 
-.copy-btn:hover { background: var(--accent-soft); }
+.copy-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  color: var(--text-muted);
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.card:hover .copy-icon-btn {
+  color: var(--accent);
+}
+
+.copy-icon,
+.check-icon {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.check-icon {
+  display: none;
+}
+
+.copy-badge {
+  display: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+/* Copied state */
+.card.copied {
+  border-color: var(--accent);
+}
+
+.card.copied .copy-icon {
+  display: none;
+}
+
+.card.copied .check-icon {
+  display: block;
+  stroke: var(--accent);
+}
+
+.card.copied .copy-badge {
+  display: inline-block;
+}
 
 /* Focus */
 a:focus-visible,
