@@ -224,10 +224,38 @@ button:focus-visible {
 
 /* Footer */
 .site-footer {
-  padding: 20px 0;
+  padding: 12px 0;
   border-top: 1px solid var(--border);
   font-size: 0.875rem;
   color: var(--text-muted);
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 3px;
+  border-radius: 6px;
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.footer-link:hover {
+  color: var(--accent);
+  background-color: var(--accent-soft);
+}
+
+.footer-icon {
+  width: 18px;
+  height: 18px;
+  display: block;
 }
 
 /* Utilities */
