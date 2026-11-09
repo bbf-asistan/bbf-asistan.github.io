@@ -54,6 +54,31 @@ main { flex: 1; padding-bottom: 48px; }
   border-bottom: 1px solid var(--border);
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-github {
+  display: inline-flex;
+  padding: 6px;
+  border-radius: 8px;
+  color: var(--text);
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.header-github:hover {
+  color: var(--accent);
+  background-color: var(--accent-soft);
+}
+
+.header-github svg {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+
 .brand {
   display: inline-block;
   padding: 18px 0;
@@ -82,7 +107,32 @@ h2 {
   gap: 16px;
 }
 
-.card-grid > li { display: flex; }
+.card-grid > li { display: flex; position: relative; }
+
+/* Repo link (top-right of card) */
+.has-repo .card-title { padding-right: 36px; }
+
+.repo-link {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  padding: 5px;
+  border-radius: 6px;
+  color: var(--text-muted);
+  transition: color 0.15s, background-color 0.15s;
+}
+
+.repo-link:hover {
+  color: var(--accent);
+  background-color: var(--surface);
+}
+
+.repo-link svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
 
 /* Cards */
 .card {
